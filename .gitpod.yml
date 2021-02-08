@@ -8,5 +8,4 @@ ports:
 
 # List the start up tasks. You can start them in parallel in multiple terminals. See https://www.gitpod.io/docs/config-start-tasks/
 tasks:
-  - init: Add exercism CLI token # runs during prebuild
-    command: exercism configure --token=$EXERCISM_TOKEN -w $(pwd)
+  - command: exercism configure --token=$EXERCISM_TOKEN -w $(pwd)
