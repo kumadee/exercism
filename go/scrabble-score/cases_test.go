@@ -21,4 +21,5 @@ var scrabbleScoreTests = []scrabbleTest{
 	{"pinata", 8},                      // english-like word
 	{"", 0},                            // empty input
 	{"abcdefghijklmnopqrstuvwxyz", 87}, // entire alphabet available
+	{"abc%", 0},                        // Not an english alphabet
 }
