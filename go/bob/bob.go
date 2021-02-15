@@ -20,6 +20,7 @@ func Hey(remark string) string {
 
 // IsAQuestion returns true if the string ends with '?'
 func IsAQuestion(remark string) bool {
+loop:
 	for i := len(remark) - 1; i > 0; i-- {
 		switch remark[i] {
 		case '?':
@@ -27,7 +28,7 @@ func IsAQuestion(remark string) bool {
 		case ' ', '\t', '\n', '\r':
 			continue
 		default:
-			return false
+			break loop
 		}
 	}
 	return false
