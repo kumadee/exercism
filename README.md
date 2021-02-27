@@ -13,7 +13,7 @@ go test -v -bench . -benchmem ./...
 To run the CPU and memory profiling, run the tests with the `cpuprofile` and `memprofile` flags.
 ```bash
 # Assuming we are already in the directory with go.mod
-for package in $(find go -maxdepth 1 -mindepth 1 -type d)
+for dir in $(find go -maxdepth 1 -mindepth 1 -type d)
 do
     go test -v -bench . -benchmem -cpuprofile ${dir}/cpu.out -memprofile ${dir}/mem.out ./${dir}
 done
